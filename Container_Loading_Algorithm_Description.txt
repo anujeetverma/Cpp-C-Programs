@@ -1,0 +1,40 @@
+
+Technical Algorithm Description for Container Loading Problem
+
+Objective:
+The problem involves loading containers onto a vehicle with a given weight capacity (W_capacity). We have two different strategies: 
+1. max_container_loading: Maximizing the number of containers loaded by starting with the smallest containers.
+2. max_weight_loading: Maximizing the total weight loaded by starting with the heaviest containers.
+
+Problem Definition:
+- Input:
+  - W_capacity: Maximum weight capacity of the vehicle (integer).
+  - containers[]: Array of container weights (integer array).
+  - numberOfContainers: Number of containers (integer).
+  - x[]: Array to store which containers are selected (binary array, where 1 represents selected, and 0 represents not selected).
+
+- Output:
+  - A modified x[] array that indicates which containers are loaded.
+  - The remaining capacity of the vehicle after loading the containers.
+
+Algorithm 1: max_container_loading
+
+Goal:
+This algorithm attempts to maximize the number of containers loaded into the vehicle, starting with the lightest containers.
+
+Steps:
+1. Sort the containers[] array in ascending order based on container weights.
+   
+2. Initialize capacity:
+   - Set currentCapacity = W_capacity to represent the remaining capacity of the vehicle.
+
+3. Iterate through the sorted containers:
+   - For each container i in containers[]:
+     - If containers[i] <= currentCapacity:
+       - Mark the container as selected (x[i] = 1).
+       - Subtract the container's weight from the current capacity: currentCapacity -= containers[i].
+     - Else, mark the container as not selected (x[i] = 0).
+
+4. Return:
+   - The modified x[] array indicating which containers are loaded.
+   - The remaining capacity currentCapacity after loading.
