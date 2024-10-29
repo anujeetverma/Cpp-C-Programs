@@ -18,5 +18,9 @@ int main(){
 
     for(int i=1; i<=10;i++){
         cout << "The decimal form of " << i << "is "<< DecToBin(i)<< "\n";
+
+    }
+    for(int i= 10; i>0; i--){
+        cout << "The decimal form of " << i << "is "<< DecToBin(i)<< "\n";
     }
 }
