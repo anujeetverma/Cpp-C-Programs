@@ -14,6 +14,20 @@ int DecToBin(int n){
     return ans;
     }
 
+int BintoDec(int n){
+    int ans = 0;
+    int rem =0;
+    int pow = 1;//2^0
+    int binNum = n;
+    while(binNum>0){
+        rem = binNum%10;
+        ans +=binNum *pow;
+        binNum /=10;
+        pow *=2;
+    }
+    return ans;
+}
+
 int main(){
 
     for(int i=1; i<=10;i++){
@@ -23,4 +37,5 @@ int main(){
     for(int i= 10; i>0; i--){
         cout << "The decimal form of " << i << "is "<< DecToBin(i)<< "\n";
     }
+    cout<<BintoDec(101101);
 }
