@@ -16,12 +16,12 @@ int DecToBin(int n){
 
 int BintoDec(int n){
     int ans = 0;
-    int rem =0;
+    int rem =1;
     int pow = 1;//2^0
     int binNum = n;
     while(binNum>0){
         rem = binNum%10;
-        ans +=binNum *pow;
+        ans +=rem *pow;
         binNum /=10;
         pow *=2;
     }
