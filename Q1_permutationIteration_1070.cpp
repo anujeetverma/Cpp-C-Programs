@@ -1,5 +1,5 @@
 #include<iostream>
-#include<bits/stdc++.h>
+// #include<bits/stdc++.h>
 using namespace std;
 
 void permute(string s, int l, int r)
@@ -16,7 +16,7 @@ else{
 }
 
 int main() {
-string str = "XYZ";
+string str = "WXYZ";
 
 int n = str.size();
 
